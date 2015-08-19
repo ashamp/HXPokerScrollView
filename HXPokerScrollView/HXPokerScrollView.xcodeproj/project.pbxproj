@@ -15,6 +15,8 @@
 		FAD7CACD1B840F04001A5911 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD7CACC1B840F04001A5911 /* Images.xcassets */; };
 		FAD7CAD01B840F04001A5911 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7CACE1B840F04001A5911 /* LaunchScreen.xib */; };
 		FAD7CADC1B840F04001A5911 /* HXPokerScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7CADB1B840F04001A5911 /* HXPokerScrollViewTests.m */; };
+		FAD7CAE81B8410B1001A5911 /* HXPokerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7CAE71B8410B1001A5911 /* HXPokerScrollView.m */; };
+		FAD7CAEB1B841132001A5911 /* UIView+UIViewExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD7CAEA1B841132001A5911 /* UIView+UIViewExtention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		FAD7CAD51B840F04001A5911 /* HXPokerScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXPokerScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD7CADA1B840F04001A5911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD7CADB1B840F04001A5911 /* HXPokerScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXPokerScrollViewTests.m; sourceTree = "<group>"; };
+		FAD7CAE61B8410B1001A5911 /* HXPokerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPokerScrollView.h; sourceTree = "<group>"; };
+		FAD7CAE71B8410B1001A5911 /* HXPokerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPokerScrollView.m; sourceTree = "<group>"; };
+		FAD7CAE91B841132001A5911 /* UIView+UIViewExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewExtention.h"; sourceTree = "<group>"; };
+		FAD7CAEA1B841132001A5911 /* UIView+UIViewExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewExtention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		FAD7CABE1B840F04001A5911 /* HXPokerScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				FAD7CAE51B8410B1001A5911 /* HXPokerScrollView */,
 				FAD7CAC31B840F04001A5911 /* AppDelegate.h */,
 				FAD7CAC41B840F04001A5911 /* AppDelegate.m */,
 				FAD7CAC61B840F04001A5911 /* ViewController.h */,
@@ -133,6 +140,17 @@
 				FAD7CADA1B840F04001A5911 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD7CAE51B8410B1001A5911 /* HXPokerScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD7CAE91B841132001A5911 /* UIView+UIViewExtention.h */,
+				FAD7CAEA1B841132001A5911 /* UIView+UIViewExtention.m */,
+				FAD7CAE61B8410B1001A5911 /* HXPokerScrollView.h */,
+				FAD7CAE71B8410B1001A5911 /* HXPokerScrollView.m */,
+			);
+			path = HXPokerScrollView;
 			sourceTree = "<group>";
 		};
 		FE6E4D7170FF5C954B3017C1 /* Frameworks */ = {
@@ -279,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD7CAC81B840F04001A5911 /* ViewController.m in Sources */,
+				FAD7CAE81B8410B1001A5911 /* HXPokerScrollView.m in Sources */,
 				FAD7CAC51B840F04001A5911 /* AppDelegate.m in Sources */,
+				FAD7CAEB1B841132001A5911 /* UIView+UIViewExtention.m in Sources */,
 				FAD7CAC21B840F04001A5911 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
