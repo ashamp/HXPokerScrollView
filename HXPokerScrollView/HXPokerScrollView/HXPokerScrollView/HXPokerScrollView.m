@@ -16,6 +16,7 @@
 
 @interface HXPokerScrollView ()<UIScrollViewDelegate>
 @property (nonatomic, strong)NSArray *views;
+@property(nonatomic,strong) UIPageControl *pageControl;
 @end
 
 @implementation HXPokerScrollView
@@ -52,7 +53,21 @@
     for (UIView *view in self.views.reverseObjectEnumerator) {
         [contentView addSubview:view];
     }
-}
+    
+    UIPageControl *pageControl=[UIPageControl new];
+    self.pageControl=pageControl;
+    pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:1 alpha:0.3];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.userInteractionEnabled = NO;
+    pageControl.hidesForSinglePage = YES;
+    pageControl.currentPage = 0;
+    pageControl.numberOfPages=self.views.count;
+    [self addSubview:pageControl];
+    [pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(pageControl.superview);
+        make.bottom.equalTo(pageControl.superview);
+//        make.height.equalTo(@20);
+    }];}
 
 #pragma mark - UIScrollViewDelegate
 
@@ -60,7 +75,7 @@
     CGFloat width = scrollView.frame.size.width;
     CGPoint contentOffset = scrollView.contentOffset;
     CGFloat currentPage = contentOffset.x/width;
-    
+    self.pageControl.currentPage = currentPage;
     for (NSInteger index = 0 ; index < currentPage + 1; index ++) {
         
         CGFloat viewMaxX = index * width;
