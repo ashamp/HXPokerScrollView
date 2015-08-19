@@ -34,7 +34,6 @@
 - (void)setupViews{
     
     UIScrollView *scrollView = [UIScrollView new];
-    scrollView.backgroundColor = [UIColor redColor];
     scrollView.delegate = self;
     scrollView.bounces = NO;
     scrollView.pagingEnabled = YES;
